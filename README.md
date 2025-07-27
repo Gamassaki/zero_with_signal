@@ -16,10 +16,20 @@ Casos como `-0.0` em ponto flutuante (IEEE 754) possuem o bit de sinal ativo, me
 
 ```c
 int zero_with_signal_portable(void *nbr, size_t size);
+```
 
 ---
 
-## Retorno
-1: se o valor tiver bit de sinal ativado.
+## 📥 Parâmetros
+```
+void *nbr: ponteiro para o valor numérico a ser analisado.
 
-0: caso contrário
+size_t size: tamanho (em bytes) do tipo (ex: sizeof(int), sizeof(double)).
+```
+---
+
+## 🔁 Retorno
+```
+ 1 – se o valor possui o bit de sinal ativado.
+ 0 – caso contrário.
+```
